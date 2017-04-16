@@ -9,7 +9,8 @@
     <section class="top-right-offset" id="nav-container">
       
       <div *ngIf="(favoritesAmount>0)?true:false" class="fav-btn-container">
-        <button mdl-ripple mdl-button mdl-button-type="fab" mdl-colored="primary" [routerLink]="['/favorites']" mdl-ripple>
+        <button mdl-ripple mdl-button mdl-button-type="fab" mdl-colored="primary" 
+        [routerLink]="['/favorites']" mdl-ripple>
              <mdl-icon>shuffle</mdl-icon>
         </button>
         <i class="favorites-badge" [innerHtml]="[(favoritesAmount>0)?favoritesAmount:'']"></i>
@@ -31,3 +32,4 @@
 
 
 </section>
+ 

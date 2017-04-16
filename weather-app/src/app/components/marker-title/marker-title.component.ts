@@ -8,10 +8,8 @@ import { Component, OnInit, Input, OnChanges, DoCheck } from '@angular/core';
 })
 export class MarkerTitleComponent implements OnInit, OnChanges {
 
-
-  // @Input() clouds?: any = [];
-   tempreture?: string = '';
-   clouds?: string = '';
+  tempreture?: string = '';
+  clouds?: string = '';
   @Input() Weather: WeatherModel;
   constructor() { }
 

@@ -22,7 +22,7 @@ export class MapsService {
     // Search By:
     var autocomplete = new window['google'].maps.places.Autocomplete(input);
     // var autocomplete = new window['google'].maps.places.Autocomplete(input, { types: ['(cities)'] });
-    
+
     autocomplete.bindTo('bounds', gMap);
     // console.log(autocomplete);
 
@@ -86,7 +86,12 @@ export class MapsService {
 
       infowindow.open(gMap, marker);
 
-      // console.log(place);
+      var LL = new window['google'].maps.LatLng({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() });
+      place.geometry.location.lng().toFixed(0);
+      gMap.setCenter(LL);
+
+      place.geometry.location.lng().toFixed(0);
+
       this.set(place);
 
     });

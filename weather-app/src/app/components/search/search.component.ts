@@ -71,12 +71,7 @@ export class SearchComponent implements OnInit,
       this.favoritesAmount = amount;
       return amount;
     });
-
-    // this.dispayNav.subscribe((count)=>{
-    //   return count = this.favoritesAmount.length
-    // });
-    // console.log(this.dispayNav);
-
+      
   };
 
   getWaeherByCityName(address?: any) {

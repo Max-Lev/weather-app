@@ -40,18 +40,27 @@ export class FavoritesComponent implements OnInit, AfterViewInit, OnDestroy {
   };
 
   deleteEmitter(indexList) {
- 
+
     this.formateItemID(this.favoritesList);
+
     indexList.filter((indxdelete, key) => {
+
       this.favoritesList.find((item, key) => {
         if (item.ID == indxdelete) {
-          this.favoritesList.splice(indxdelete, 1);
+          (item.ID == 0) ? this.favoritesList.splice(-indxdelete, 1) : false;
+
+          (item.ID == this.favoritesList.length) ? this.favoritesList.splice(indxdelete - 1, 1) : false;
+
+          (item.ID != 0) ? this.favoritesList.splice(indxdelete, 1) : false;
           return true;
         }
       });
-    }); 
+    });
+
     this.showDeleteBtn = false;
+
     this.favoritesService.setSharedList(this.favoritesList);
+
     (this.favoritesList.length == 0) ? this.router.navigate(['search']) : false;
 
   };
