@@ -1,3 +1,5 @@
+Angular 2.x Cordova Google Maps AutoComplete & Weather Service
+
 Angular Development:
 Use Angular-CLi.
 
