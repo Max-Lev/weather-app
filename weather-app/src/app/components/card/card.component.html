@@ -1,0 +1,25 @@
+<div class="weather-card-wide mdl-card mdl-shadow--2dp">
+
+  <div class="mdl-card__title">
+    <img [src]="favoritesList.img" alt="" (error)="imageError($event)">
+  </div>
+
+  <div class="mdl-card__supporting-text">
+    {{favoritesList.location}}
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border mdl-card__supporting-text">
+    <span class="mdl-card__supporting-text">
+           Clouds: {{favoritesList.clouds}}
+    </span>
+    <span class="mdl-card__supporting-text">
+           Temprature: {{favoritesList.temprature}}
+    </span>
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border">
+    <mdl-icon (click)="setDelete(favoritesList)"
+     [innerHtml]="[(state)?'delete':'delete_forever']"></mdl-icon>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.gm-style-iw>div {
+    #infowindow-content {
+        display: block;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        span {
+            line-height: 2.5;
+             display: flex; 
+        }
+    }
+}

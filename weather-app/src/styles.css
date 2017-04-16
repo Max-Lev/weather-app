@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+body>.app {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+}
+
+/*table.mdl-data-table {
+    white-space: initial;
+}
+
+mdl-table-selectable table {
+    width: 100%;
+}
+
+table.mdl-data-table {
+    white-space: initial;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+table.mdl-data-table thead {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: initial;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+table.mdl-data-table thead>tr {
+    display: flex;
+    border: 1px solid;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+}
+
+table.mdl-data-table thead>tr th {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.mdl-data-table td {
+    border: 1px solid;
+}
+
+.mdl-data-table tr {
+    
+}*/

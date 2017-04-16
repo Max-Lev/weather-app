@@ -1,0 +1,15 @@
+<section class="favorites-list-container">
+
+  <section class="mdl-grid">
+    <div *ngFor="let item of favoritesList;let i = index;" [attr.data-index]="i" 
+    class="--wrapper mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+      <app-card [favoritesList]="item" [itemIndx]="i"></app-card>
+    </div>
+  </section>
+
+  <section class="back-delete-menu">
+    <app-back></app-back>
+    <app-delete *ngIf="showDeleteBtn" (deleteEmitter)="deleteEmitter($event)"></app-delete>
+  </section>
+
+</section>

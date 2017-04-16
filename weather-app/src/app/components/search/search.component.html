@@ -1,0 +1,33 @@
+<section class="map-container">
+
+  <section class="pac-card" id="pac-card" [hidden]="!isIdle">
+
+    <div id="pac-container">
+      <input id="pac-input" type="text" value="" placeholder="Search for Weather">
+    </div>
+
+    <section class="top-right-offset" id="nav-container">
+      
+      <div *ngIf="(favoritesAmount>0)?true:false" class="fav-btn-container">
+        <button mdl-ripple mdl-button mdl-button-type="fab" mdl-colored="primary" [routerLink]="['/favorites']" mdl-ripple>
+             <mdl-icon>shuffle</mdl-icon>
+        </button>
+        <i class="favorites-badge" [innerHtml]="[(favoritesAmount>0)?favoritesAmount:'']"></i>
+      </div>
+
+      <div class="fav-btn-container add-btn-container">
+        <button mdl-ripple (click)="add()" mdl-button mdl-button-type="fab" mdl-colored="accent">
+           <mdl-icon>add</mdl-icon>
+        </button>
+      </div>
+
+    </section>
+
+  </section>
+
+  <div id="map"></div>
+
+  <app-marker-title [Weather]="WeatherModel"></app-marker-title>
+
+
+</section>
