@@ -21,6 +21,7 @@ import { MarkerTitleComponent } from './components/marker-title/marker-title.com
 import { BackComponent } from './components/back/back.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { CardComponent } from './components/card/card.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CardComponent } from './components/card/card.component';
     MarkerTitleComponent,
     BackComponent,
     DeleteComponent,
-    CardComponent
+    CardComponent,
+    PreloaderComponent
     
   ],
   imports: [

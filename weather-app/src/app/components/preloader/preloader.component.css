@@ -1,0 +1,87 @@
+/**
+ * Google Material Design Preloader
+ *
+ * CSS animated SVG implementation of the Google Material Design preloader
+ *
+ * Reference: http://goo.gl/ZfulRH
+ * License: MIT
+ * Author: Rudi Theunissen (rudolf.theunissen@gmail.com)
+ * Version: 1.1.1
+ */
+
+#loader {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.md-preloader {
+    font-size: 0;
+    display: inline-block;
+    animation: outer 6600ms linear infinite;
+}
+
+.md-preloader {
+    display: block;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+
+.md-preloader svg {
+    /*animation: inner 1320ms linear infinite;*/
+}
+
+.md-preloader svg circle {
+    fill: none;
+    stroke: aqua;
+    stroke-width: 5;
+    stroke-linecap: square;
+    animation: arc 1320ms cubic-bezier(.5, .2, 1, .5) infinite;
+}
+
+@keyframes outer {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes inner {
+    0% {
+        transform: rotate(-100.8deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes arc {
+    0% {
+        stroke-dasharray: 1 210.48670779px;
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dasharray: 151.55042961px, 210.48670779px;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 1 210.48670779px;
+        stroke-dashoffset: -151.55042961px;
+    }
+}

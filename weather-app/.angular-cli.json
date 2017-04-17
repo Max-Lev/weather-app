@@ -23,7 +23,7 @@
       "scss/mixin.scss"
     ],
     "scripts": [
-      
+
     ],
     "environmentSource": "environments/environment.ts",
     "environments": {
