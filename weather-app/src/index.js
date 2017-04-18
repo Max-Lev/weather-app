@@ -17,51 +17,33 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
-    initialize: function () {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        //document.getElementById('deviceDetails').addEventListener('click', this.deviceDetails);
-    },
+  // Application Constructor
+  initialize: function () {
+    document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    console.log('device ready');
+  },
+  
+  // Bind any cordova events here. Common events are:
+  // 'pause', 'resume', etc.
+  onDeviceReady: function () {
+    console.log('onDeviceReady');
+    this.receivedEvent('deviceready');
+    this.getStatusBarState();
+  },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function () {
-        console.log('onDeviceReady');
-        this.receivedEvent('deviceready');
-    },
+  // Update DOM on a Received Event
+  receivedEvent: function (id) {
+  
+  },
+  getStatusBarState() {
+    console.log(app);
+    console.log(StatusBar);
+    console.log('device ready: ');
 
-    // Update DOM on a Received Event
-    receivedEvent: function (id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+  }
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
-    },
-    deviceDetails: function () {
-        var deviceDetails = '';
-        deviceDetails += "<br/>Cordova:" + device.cordova;
-        deviceDetails += "<br/>Model:" + device.model;
-        deviceDetails += "<br/>Uniq ID:" + device.uuid;
-        deviceDetails += "<br/>Version:" + device.version;
-        deviceDetails += "<br/>Serial Num:" + device.serial;
-        deviceDetails += "<br/>Manufacturer:" + device.manufacturer;
-        deviceDetails += "<br/>Is Virtual:" + device.isVirtual;
-        document.querySelector('#details').innerHTML = deviceDetails;
-    }
 };
 
 app.initialize();
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    console.log(app);
-    console.log(StatusBar);
-    console.log('device ready: ');
-}
