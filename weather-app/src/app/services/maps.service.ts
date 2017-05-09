@@ -24,8 +24,7 @@ export class MapsService {
     // var autocomplete = new window['google'].maps.places.Autocomplete(input, { types: ['(cities)'] });
 
     autocomplete.bindTo('bounds', gMap);
-    // console.log(autocomplete);
-
+    
     var infowindow = new window['google'].maps.InfoWindow();
 
     var infowindowContent = document.getElementById('infowindow-content');
@@ -63,12 +62,11 @@ export class MapsService {
       // If the place has a geometry, then present it on a map.
       if (place.geometry.viewport) {
         gMap.fitBounds(place.geometry.viewport);
-        // console.log('place.geometry.viewport:', place.geometry.viewport);
       } else {
         gMap.setCenter(place.geometry.location);
         gMap.setZoom(17);
       }
-      // console.log('place.geometry:', place.geometry);
+
 
       marker.setPosition(place.geometry.location);
       marker.setVisible(true);
@@ -159,7 +157,5 @@ export class MapsService {
     address.img = place.pImg;
     this.cityLocation.next(address);
   };
-
-
 
 }
