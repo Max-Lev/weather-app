@@ -27,7 +27,7 @@ export class SearchComponent implements OnInit,
   isIdle: boolean = false;
   subscription: Subscription;
   favoritesAmount: any;
-  dispayNav:any = new Observable();
+  dispayNav: any = new Observable();
 
   constructor(private ref: ChangeDetectorRef, private router: Router,
     private weatherService: WeatherService, private favoritesService: FavoritesService,
@@ -71,12 +71,12 @@ export class SearchComponent implements OnInit,
       this.favoritesAmount = amount;
       return amount;
     });
-      
+
   };
 
   getWaeherByCityName(address?: any) {
 
-    
+
     this.subscription = this.weatherService.getTemprature(address).subscribe((weather) => {
 
       this.WeatherModel = new WeatherModel(address, weather);

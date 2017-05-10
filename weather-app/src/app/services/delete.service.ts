@@ -23,6 +23,8 @@ export class DeleteService {
       this.indx.push(indx);
     }
     if (!state) {
+      //check if index already exists in an array
+      // if true: remove duplicated key
       this.indx.find((itm, key) => {
         if (itm == indx) {
           this.indx.splice(key, 1);
@@ -30,7 +32,6 @@ export class DeleteService {
         }
       });
     }
-
     this.indx$ = Rx.Observable.of(this.indx);
     this.deleteList.next(this.indx);
 
