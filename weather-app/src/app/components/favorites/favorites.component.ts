@@ -36,7 +36,6 @@ export class FavoritesComponent implements OnInit, AfterViewInit, OnDestroy {
       return item;
     });
 
-    this.favoritesList = list;
     this.subscription = this.deleteService.deleteList$.subscribe((items: Array<any>) => {
       this.showDeleteBtn = (items.length > 0) ? true : false;
     });
