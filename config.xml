@@ -25,8 +25,9 @@
     </platform>
     <plugin name="cordova-plugin-device" spec="~1.1.5" />
     <allow-navigation href="*" />
-    <engine name="ios" spec="~4.3.1" />
-    <preference name="StatusBarOverlaysWebView" value="false" /> 
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#7c4dff" />
     <preference name="StatusBarStyle" value="styleDefault" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <engine name="ios" spec="^4.5.0" />
 </widget>

@@ -31,15 +31,17 @@ export class FavoritesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
 
-    this.favoritesList = this.favoritesService.getFavorites().map((item, key) => {
-      item.ID = key;
-      return item;
-    });
+    setTimeout(() => {
+      this.favoritesList = this.favoritesService.getFavorites().map((item, key) => {
+        item.ID = key;
+        return item;
+      });
+    }, 0);
 
     this.subscription = this.deleteService.deleteList$.subscribe((items: Array<any>) => {
       this.showDeleteBtn = (items.length > 0) ? true : false;
     });
-    this.showDeleteBtn = true;
+    // this.showDeleteBtn = true;
   };
 
   //deleteEmitter: from btn delete-component

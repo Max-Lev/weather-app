@@ -1,0 +1,22 @@
+{
+  "name": "io.cordova.weatherapp",
+  "version": "1.0.0",
+  "displayName": "WeatherApp",
+  "cordova": {
+    "platforms": [
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-console": {}
+    }
+  },
+  "dependencies": {
+    "cordova-ios": "^4.5.0",
+    "cordova-plugin-console": "^1.1.0",
+    "cordova-plugin-device": "~1.1.5",
+    "cordova-plugin-whitelist": "1",
+    "ios-sim": "^6.1.2"
+  }
+}
